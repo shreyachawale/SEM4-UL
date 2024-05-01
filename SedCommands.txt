@@ -1,0 +1,50 @@
+1- Print first 3 records
+$ sed '3q' myFile.lst
+
+2- Print only first and second record
+$ sed '1,2p' myFile.lst
+
+3- Remove duplicate and unwanted while printing 1,2 line.
+$ sed -n '1,2p' myFile.lst
+
+4- Display last record.
+$ sed -n '$p' myFile.lst 
+
+5- Copy first 4 records to new file name file named newRec.fil
+$ sed '1,4w newRec.fil' myFile.lst 
+cat newRec.fil
+
+6- Insert new record in file.
+$ sed '1iJonah 11 Student 0 1 July 2020' myFile.lst
+
+7- Insert text line "This is my world after every line".
+$ sed 'i\This is my world' myFile.lst
+
+8- Delete text line having pattern "This is my world after every line".
+$ ed '/This is my world/d' myFile.lst
+
+9- Replace all occurrence of \t by space.
+$ sed 's/\t//g' myFile.lst
+
+10- Replacing or substituting string
+$ sed 's/unix/linux/' myFile.txt 
+By default, the sed command replaces the first occurrence of the pattern in each line and it won’t replace the second, third…occurrence in the line.
+
+11- Replacing the nth occurrence of a pattern in a line 
+$ sed 's/unix/linux/2' myFile.txt
+
+12- Replacing all the occurrence of the pattern in a line
+$ sed 's/unix/linux/g' myFile.txt
+
+13- Display line number n from a file using SED
+$ sed -n '5p' myFile.txt
+
+14- Find / Process as stated occurrence of word “Manager” in file using SED/Grep/AWK
+Display Lines Containing "Manager"
+$ sed -n '/Manager/p' myFile.txt
+
+15- Replace "Manager" with Another Word
+$ sed 's/Manager/Supervisor/g' myFile.txt
+
+16- Display employees with odd number record/ID using SED
+$ sed -n '1~2p' myFile.txt

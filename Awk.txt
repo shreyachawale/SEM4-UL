@@ -1,0 +1,19 @@
+1- Print first three fields
+awk '{printf "%3d\t%-15s\t%7d\n", $1,$2,$3}' myFile.txt
+
+2- print all records
+awk '{print}' myFile.lst
+
+3- Print all records whose account type is current
+awk '$5=="current"' myFile.lst
+
+4- print records having balance < 5000
+awk '$3<5000' myFile.lst
+
+5- print all records having balance < 5000 or balance > 10000
+awk "$3 < 5000 || $3 > 10000"
+
+6- print all records whose account is not current
+awk '$5 != current' myFile.lst
+
+7- 

@@ -21,7 +21,7 @@ $ sed '1iJonah 11 Student 0 1 July 2020' myFile.lst
 $ sed 'i\This is my world' myFile.lst
 
 8- Delete text line having pattern "This is my world after every line".
-$ ed '/This is my world/d' myFile.lst
+$ sed '/This is my world/d' myFile.lst
 
 9- Replace all occurrence of \t by space.
 $ sed 's/\t//g' myFile.lst

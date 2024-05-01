@@ -1,0 +1,38 @@
+1- To add in the data
+echo -e "Rocky\t26\tBaker\t7 May 2023" >> myFile.lst
+
+2- search lines Containing 
+grep -h "ba" myFile.lst
+
+3- count the number of lines Containing
+grep -c "baker" myFile.lst
+
+4- display line number along with the lines containing 
+grep -n "engineer" myFile.lst
+
+5- display lines not containing the pattern
+grep -v "engineer" myFile.lst
+
+6- display lines containing the pattern "baker"
+grep -i "baker" myFile.lst
+
+7- print two lines before and after the line containing the pattern
+grep -B2 -A2 "dentist" myFile.lst
+
+8- display all recods starting with
+grep -h ^1 myFile.lst
+
+9- display all recods ending with "st"
+grep "st$" myFile.lst
+
+10- display all recods containing pattern "...ot"
+grep -h "...ot" myFile.lst
+
+11- display all characters that start with "P" and end with "t"
+grep P.*t myFile.lst
+
+12- print lines which dont start in the range 2 to 4
+grep ^[^2-3] myFile.lst
+
+13- Print all the records containing letters in the range H to K
+grep [H-K] myFile.lst

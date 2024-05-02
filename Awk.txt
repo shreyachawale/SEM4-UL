@@ -16,4 +16,32 @@ awk "$3 < 5000 || $3 > 10000"
 6- print all records whose account is not current
 awk '$5 != current' myFile.lst
 
-7- 
+7- print all records not ending with character “g”
+awk '$5!~/g$/' myFile.lst
+
+8- .Print names of customer having savings account
+awk '$5~/saving/{print $2}' myFile.lst 
+
+9- Display records from 3-7
+awk 'NR>=3 && NR<=7 {print $1 $2 $3}' myFile.lst
+
+10- Display acc no. Name,and balance of records having record no.2 or record no.8 along with record number
+awk 'NR==2 || NR==8 {print}' myFile.lst
+
+11- Print number of fields in each line
+awk '{print NF}' myFile.lst
+
+12- Print last field of each line
+awk '{print $NF}' myFile.lst
+
+13- Print all records having “A” at the beginning of second field
+awk '$2~"^a"' myFile.lst
+
+14- records whose date of opening is and the year is 09 and whose name starts with “N”
+awk '$4~/20.*09/&& $2~/^N/' myFile.lst
+
+15- Print all lines whose length is more than 32
+awk 'length($0) > 32' myFile.lst
+
+
+

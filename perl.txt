@@ -41,6 +41,14 @@ print "Enter the number of years: ";
 my $t = <STDIN>;
 chomp($t);
 
+print "Enter the number of times interest is compunded: ";
+my $n = <STDIN>;
+chomp($n);
+
+my $final_amount = compound_interest($P, $r, $t, $n);
+
+printf("The final amount after compounding is: %.2f\n", $final_amount);
+
 PROFIT Loss
 #!/usr/bin/perl
 

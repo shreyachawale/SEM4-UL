@@ -19,13 +19,13 @@ grep -i "baker" myFile.lst
 7- print two lines before and after the line containing the pattern
 grep -B2 -A2 "dentist" myFile.lst
 
-8- display all recods starting with
+8- display all records starting with
 grep -h ^1 myFile.lst
 
-9- display all recods ending with "st"
+9- display all records ending with "st"
 grep "st$" myFile.lst
 
-10- display all recods containing pattern "...ot"
+10- display all records containing pattern "...ot"
 grep -h "...ot" myFile.lst
 
 11- display all characters that start with "P" and end with "t"
